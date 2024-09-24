@@ -10,8 +10,10 @@
             margin: 0;
             padding: 0;
             height: 100vh;
-            background-image: url(red\ medica-10.jpg);
-            background-size: cover;
+            background-image: url('red medica-10.jpg');
+            background-size: cover; /* Asegura que la imagen de fondo cubra todo el viewport */
+            background-position: center; /* Centra la imagen de fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -77,15 +79,15 @@
                 padding: 10px 20px;
                 border-radius: 10px;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto */
-                font-family: 'Courier New', Courier, monospace; /* Cambiar tipografía */
-                letter-spacing: 1.5px; /* Espaciado entre letras */
-                transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones */
+                font-family: 'Courier New', Courier, monospace;
+                letter-spacing: 1.5px;
+                transition: transform 0.3s ease, background-color 0.3s ease;
             }
 
             h1:hover {
-                background-color: rgba(11, 232, 240, 0.808); /* Cambia fondo al pasar el mouse */
+                background-color: rgba(11, 232, 240, 0.808);
                 color: #333;
-                transform: scale(1.0); /* Efecto de agrandar al pasar el mouse */
+                transform: scale(1.0);
             }
 
             .social-links img {
