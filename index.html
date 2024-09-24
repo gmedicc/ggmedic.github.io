@@ -42,7 +42,7 @@
             width: 100%;
             max-width: 600px;
             padding: 20px;
-            margin-top: 600px; /* Añade espacio para empujar el botón hacia abajo */
+            margin-top: 500px; /* Añade espacio para empujar el botón hacia abajo */
         }
 
         .button {
@@ -65,6 +65,15 @@
             transform: scale(1.5);
         }
 
+        /* Estilos para el logo */
+        .logo {
+            display: none;
+            position: absolute;
+            top: 20px;
+            width: 150px;
+            z-index: 2;
+        }
+
         /* Media Queries para pantallas más pequeñas */
         @media (max-width: 768px) {
             .button {
@@ -75,6 +84,11 @@
             body {
                 height: auto;
                 overflow: auto; /* Permite que el fondo se vea completo sin cortarse */
+            }
+
+            .logo {
+                display: block; /* Muestra el logo en dispositivos móviles */
+                left: calc(50% - 75px); /* Centra el logo */
             }
         }
 
@@ -104,10 +118,14 @@
     </style>
 </head>
 <body>
+    <!-- Logo que se mostrará solo en móviles -->
+    <img src="logo.png" alt="Logo GMEDIC" class="logo">
+
     <div class="background" id="background"></div>
     <div class="container">
         <a href="gmedic.html" class="button">ENTRA!!</a>
     </div>
+
     <script>
         window.addEventListener('load', function() {
             document.getElementById('background').classList.add('show');
@@ -115,3 +133,4 @@
     </script>
 </body>
 </html>
+
