@@ -13,8 +13,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            overflow: hidden;
             background-color: #f4f4f4;
+            overflow: hidden; /* Eliminado para que el fondo no se corte en dispositivos móviles */
         }
 
         .background {
@@ -24,8 +24,8 @@
             width: 100%;
             height: 100%;
             background-image: url(ASESORES.jpg);
-            background-size: cover;
-            background-position: center;
+            background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+            background-position: center; /* Centra el fondo en la pantalla */
             opacity: 0;
             transition: opacity 2s ease-in-out;
         }
@@ -47,7 +47,7 @@
 
         .button {
             background-color: #00ffea;
-            color: white;
+            color: rgb(0, 0, 0);
             border: none;
             padding: 15px 30px;
             font-size: 1.2em;
@@ -70,7 +70,11 @@
             .button {
                 font-size: 1em;
                 padding: 12px 24px;
-                transform: scale(1);
+            }
+
+            body {
+                height: auto;
+                overflow: auto; /* Permite que el fondo se vea completo sin cortarse */
             }
         }
 
@@ -79,19 +83,22 @@
                 font-size: 0.9em;
                 padding: 10px 20px;
             }
+
+            body {
+                height: auto;
+                overflow: auto; /* Para pantallas más pequeñas, permitimos el scroll si es necesario */
+            }
         }
 
         @media (max-height: 500px) {
             body {
                 height: auto;
-                display: block;
                 padding-top: 30px;
                 padding-bottom: 30px;
             }
 
             .container {
-                top: 0;
-                transform: none;
+                margin-top: 0;
             }
         }
     </style>
@@ -108,6 +115,3 @@
     </script>
 </body>
 </html>
-
-
-
